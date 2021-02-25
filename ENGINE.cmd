@@ -5,4 +5,6 @@ if exist "CONFIG.bat" ( goto skip_setup)
 echo ::Borrame si quieres reset > CONFIG.bat
 set ask=Y
 set /p ask="Quieres minimalismo? ([Y]/N): "
+echo OK
+if /i "%ask%"=="Y" ( echo set minimal=true >> CONFIG.bat)
 :skip_setup
